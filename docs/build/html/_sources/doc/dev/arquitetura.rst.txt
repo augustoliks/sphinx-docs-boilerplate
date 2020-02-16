@@ -7,8 +7,6 @@ O seguinte diagrama, mostra as possíveis comunicações do módulo **my-module*
     :file: _static/diagram.svg
 
 
-.. [#f1] Observação do elemento do diagrama.
-
 
 Estrutura do Código
 ===================
@@ -36,4 +34,4 @@ Documentação do Código Fonte
 
 Esta seção concentra a documentação dos Submódulos, Classes, Métodos e Rotinas a nível de código. 
 
-Para consultar a documentação agruprado por classes e métodos, acessar :ref:`genindex`. Já para consulta da documentação agrupadas por Submódulos, acessar :ref:`modindex`.
+Para consultar a documentação agruprado por classes e métodos, acessar . Já para consulta da documentação agrupadas por Submódulos, acessar

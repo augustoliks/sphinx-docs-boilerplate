@@ -12,8 +12,8 @@
 #
 import os
 import sys
-# sys.path.insert(0, os.path.abspath('../../src'))
 
+# sys.path.insert(0, os.path.abspath('../../src'))
 
 # -- Project information -----------------------------------------------------
 
@@ -24,6 +24,7 @@ author = 'Carlos Neto'
 # The full version, including alpha/beta/rc tags
 release = '25/01/2020'
 
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 

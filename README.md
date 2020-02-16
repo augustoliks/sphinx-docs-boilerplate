@@ -1,7 +1,8 @@
 # sphinx-docs-boilerplate
 
-|build-status| |docs| |coverage|
+[![Documentation Status](https://readthedocs.org/projects/sphinx-docs-boilerplate/badge/?version=latest)](https://sphinx-docs-boilerplate.readthedocs.io/en/latest/?badge=latest)
 
+[![codecov](https://codecov.io/gh/augustoliks/sphinx-docs-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/augustoliks/sphinx-docs-boilerplate)
 
 ## Sobre 
 
