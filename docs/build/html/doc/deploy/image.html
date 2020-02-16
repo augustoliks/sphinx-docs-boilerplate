@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Imagem de container &mdash; Documentação my-module 25/01/2020</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../../search.html" />
+    <link rel="next" title="1. Arquitetura do módulo" href="../dev/arquitetura.html" />
+    <link rel="prev" title="1. Configuração" href="configuracao.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> my-module
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Deploy</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="configuracao.html">1. Configuração</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Imagem de container</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#estrutura-do-nome-de-registro">2.1. Estrutura do nome de Registro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links-para-download">2.2. Links para Download</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Desenvolvimento</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/arquitetura.html">1. Arquitetura do módulo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/arquitetura.html#estrutura-do-codigo">2. Estrutura do Código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/arquitetura.html#documentacao-do-codigo-fonte">3. Documentação do Código Fonte</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Características das Versões</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog's</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">my-module</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Imagem de container</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/doc/deploy/image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imagem-de-container">
+<h1><span class="section-number">2. </span>Imagem de container<a class="headerlink" href="#imagem-de-container" title="Link permanente para este título">¶</a></h1>
+<p>O <strong>my-module</strong> possui uma rotina automática para a criação de imagens de containers, e entrega ao servidor de repositório [SERVIDOR]. A rotina cria e entrega imagens compatíveis com arquitetura <code class="docutils literal notranslate"><span class="pre">x86</span></code> e <code class="docutils literal notranslate"><span class="pre">arm32v7</span></code>.</p>
+<div class="section" id="estrutura-do-nome-de-registro">
+<h2><span class="section-number">2.1. </span>Estrutura do nome de Registro<a class="headerlink" href="#estrutura-do-nome-de-registro" title="Link permanente para este título">¶</a></h2>
+<p>O nome de registro da imagem segue o seguinte formato <code class="docutils literal notranslate"><span class="pre">[REPOSITORIO]/my-module</span></code>. Assim, na atual versão, o registro de <code class="docutils literal notranslate"><span class="pre">my-module</span></code> está assim:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dockerhub</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">module</span>
+</pre></div>
+</div>
+<p>As tags das imagens indicam a versão do projeto, o ambiente e a arquitetura correspondente. Para tags de versão de produção, e adotado a estrutura <code class="docutils literal notranslate"><span class="pre">ARQUITETURA-VERSÃO</span></code>, para tags de <em>desenvolvimento</em> e <em>homologação</em> é adotado a estrutura <code class="docutils literal notranslate"><span class="pre">ARQUITETURA-AMBIENTE</span></code>. Segue em tópico a descrição dos componentes das tags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VERSÃO</span></code>: A versão do projeto é composta por três digitos separados por <code class="docutils literal notranslate"><span class="pre">.</span></code>, primeiro dígito indica a versão do projeto a nível de funcionalidades, o segundo dígito obdece a nível de características, e o terceiro dígito obdece a nível de correções de bugs;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AMBIENTE</span></code>: O ambiente define qual estágio a imagem foi preparada. Para imagens em testes em ambiente de desenvolvimento, receberá o rótulo de <cite>develop</cite>;  Para imagens em etapas de validação em equipamentos em campo, receberá o rótulo <cite>homolog</cite> e por fim, imagens maduras e estáveis, não recebem nenhum rótulo;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ARQUITETURA</span></code>: Definida pelo valores <code class="docutils literal notranslate"><span class="pre">x86</span></code> e <code class="docutils literal notranslate"><span class="pre">arm</span></code>, e como os propios nomes indicam, o valor <code class="docutils literal notranslate"><span class="pre">x86</span></code> define imagem para estrutura x86 e <code class="docutils literal notranslate"><span class="pre">arm</span></code> define arm32v7.</p></li>
+</ul>
+</div>
+<div class="section" id="links-para-download">
+<h2><span class="section-number">2.2. </span>Links para Download<a class="headerlink" href="#links-para-download" title="Link permanente para este título">¶</a></h2>
+<p>A atual versão está disponivel para download com os seguintes registros:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Arquitetura</p></th>
+<th class="head"><p>Ambiente</p></th>
+<th class="head"><p>Registro</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>arm32v7</p></td>
+<td><p>Produção</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dockerhub/my-module:arm-0.1.0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x86</p></td>
+<td><p>Produção</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dockerhub/my-module:x86-0.1.0</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>As versões de homologação e desenvolvimento são sempre sobscrita pelas imagens mais recentes.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>o campo <code class="docutils literal notranslate"><span class="pre">[REPOSITORIO]</span></code> do nome do registro da imagem está suscetível a mudanças.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dev/arquitetura.html" class="btn btn-neutral float-right" title="1. Arquitetura do módulo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="configuracao.html" class="btn btn-neutral float-left" title="1. Configuração" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Carlos Neto
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
